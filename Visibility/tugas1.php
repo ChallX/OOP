@@ -3,13 +3,13 @@
 class Sekolah{
 
     public $nama;
-    protected $alamat = "Cibalok";
+    protected $alamat ;
     private $jumlahsiswa;
     private $jumlahguru;
     private $jumlahkelas;
 
 
-    public function totalsiswa($siswabaru){
+    public function totalsiswa($siswabaru){   
         $this -> jumlahsiswa = $siswabaru;
         return $siswabaru;
     }
@@ -21,11 +21,7 @@ class Sekolah{
         $this -> jumlahkelas = $kelasbaru;
         return $kelasbaru;
     }
-  
-
-
 }
-
 
 class alamatsekolah extends Sekolah{
 
@@ -40,8 +36,7 @@ class alamatsekolah extends Sekolah{
    }
 }
 
-
-$nama1 = new Sekolah;
+$nama1 = new Sekolah();
 $nama1 -> nama = "SMK Ikan Tenggiri";
 $alamat3 = new alamatsekolah();
 $alamat3->setAlamat("Jl. Raya Wangun");
